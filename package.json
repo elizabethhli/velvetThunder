@@ -1,0 +1,33 @@
+{
+  "name": "velvet-thunder-bot",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Discord bot to track daily cleaning habits with streak tracking and rewards",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "register": "node register.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "habit-tracker",
+    "cleaning"
+  ],
+  "author": "Elizabeth Li",
+  "license": "MIT",
+  "dependencies": {
+    "discord-interactions": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
