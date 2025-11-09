@@ -140,7 +140,7 @@ export function getStats() {
   return {
     currentStreak,
     totalCompleted: tracker.completedDates.length,
-    cycleStartDate: tracker.cycleStartDate,
+    cycleStartDate: tracker.completedDates.length === 0 ? null : tracker.cycleStartDate,
     isPaused: tracker.isPaused,
     completedDates: tracker.completedDates,
   };
