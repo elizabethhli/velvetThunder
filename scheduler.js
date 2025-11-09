@@ -60,7 +60,7 @@ async function sendReminder(timeLabel) {
     const endpoint = `channels/${CHANNEL_ID}/messages`;
     
     const message = {
-      content: `🧹 **Daily Cleaning Reminder** (${timeLabel})\n\nTime for your 30-minute cleanup! Click the button below when you're done.`,
+      content: `@everyone 🧹 **Daily Cleaning Reminder** (${timeLabel})\n\nTime for your 30-minute cleanup! Click the button below when you're done.`,
       components: [
         {
           type: 1, // Action Row
