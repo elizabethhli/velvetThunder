@@ -51,6 +51,8 @@ async function sendReminder(timeLabel) {
     return;
   }
 
+  const reminderDate = new Date().toISOString().split('T')[0]; // Get date when reminder is SENT
+
   if (isTodayCompleted()) {
     console.log(`✅ Already completed today, skipping ${timeLabel} reminder`);
     return;
@@ -69,7 +71,7 @@ async function sendReminder(timeLabel) {
               type: 2, // Button
               style: 3, // Success/Green style
               label: '✅ Done!',
-              custom_id: 'cleaning_done',
+              custom_id: `cleaning_done_${reminderDate}`,
             },
           ],
         },
