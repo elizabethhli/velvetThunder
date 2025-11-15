@@ -51,7 +51,7 @@ async function sendReminder(timeLabel) {
     return;
   }
 
-  const reminderDate = new Date().toISOString().split('T')[0]; // Get date when reminder is SENT
+  const reminderDate = new Date().toLocaleDateString('sv-SE', { timeZone: 'America/New_York' }); // Get date when reminder is SENT (in Eastern Time)
 
   if (isTodayCompleted()) {
     console.log(`✅ Already completed today, skipping ${timeLabel} reminder`);
