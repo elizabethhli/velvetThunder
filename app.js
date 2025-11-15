@@ -147,9 +147,9 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
     if (type === InteractionType.MESSAGE_COMPONENT) {
         const { custom_id } = data;
 
-        if (custom_id.startsWith('cleaning_done')) {
+        if (custom_id.startsWith('cleaning_done_')) {
             // Get date from custom_id
-            const dateFromButton = custom_id.replace('cleaning_done', '');
+            const dateFromButton = custom_id.replace('cleaning_done_', '');
             const username = member?.user?.username || user?.username || 'Someone';
             const result = markComplete(dateFromButton, username);
 
